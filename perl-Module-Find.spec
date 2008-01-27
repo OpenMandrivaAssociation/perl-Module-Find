@@ -1,9 +1,9 @@
 %define module	Module-Find
 %define	modprefix Module
 
-%define version	0.05
+%define version	0.06
 
-%define	rel	2
+%define	rel	1
 %define release	%mkrel %{rel}
 
 Summary:	Find and use installed modules in a (sub)category
