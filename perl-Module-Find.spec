@@ -1,20 +1,16 @@
-%define module	Module-Find
-%define	modprefix Module
+%define upstream_name	 Module-Find
+%define upstream_version 0.06
 
-%define version	0.06
-
-%define	rel	1
-%define release	%mkrel %{rel}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Find and use installed modules in a (sub)category
-Name:		perl-%{module}
-Version:	%{version}
-Release:	%{release}
 License:	Artistic/GPL
 Group:		Development/Perl
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{modprefix}/%{module}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{module}/
-BuildRoot:	%{_tmppath}/%{name}-buildroot
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
@@ -22,6 +18,7 @@ BuildRequires:	perl(File::Find)
 BuildRequires:	perl(File::Spec)
 BuildRequires:	perl(Test::More)
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Module::Find lets you find and use modules in categories. This can be
@@ -31,7 +28,7 @@ subcategories.
 
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -51,5 +48,4 @@ rm -rf %{buildroot}
 %defattr(644,root,root,755)
 %doc Changes
 %{_mandir}/man*/*
-%{perl_vendorlib}/%{modprefix}
-
+%{perl_vendorlib}/Module
