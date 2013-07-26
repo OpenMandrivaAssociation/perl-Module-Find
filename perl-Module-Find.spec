@@ -1,15 +1,15 @@
 %define upstream_name	 Module-Find
-%define upstream_version 0.10
+%define upstream_version 0.11
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Version:	%perl_convert_version 0.11
+Release:	1
 
 Summary:	Find and use installed modules in a (sub)category
 License:	Artistic/GPL
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}/
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Module/Module-Find-0.11.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(File::Find)
@@ -78,4 +78,5 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Mon Jun 26 2006 Scott Karns <scottk@mandriva.org> 0.05-1mdv2007.0
 - Initial MDV release
+
 
