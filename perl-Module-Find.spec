@@ -8,7 +8,7 @@ Release:	3
 Summary:	Find and use installed modules in a (sub)category
 License:	Artistic/GPL
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}/
+Url:		https://search.cpan.org/dist/%{upstream_name}/
 Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Module/Module-Find-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
