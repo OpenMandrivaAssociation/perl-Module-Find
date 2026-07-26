@@ -1,15 +1,13 @@
 %define upstream_name	 Module-Find
-%define upstream_version 0.17
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.17
+Release:	2
 
 Summary:	Find and use installed modules in a (sub)category
 License:	Artistic/GPL
 Group:		Development/Perl
 Url:		https://github.com/crenz/Module-Find
-Source0:	https://cpan.metacpan.org/authors/id/C/CR/CRENZ/Module-Find-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/C/CR/CRENZ/Module-Find-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -26,7 +24,7 @@ subcategories.
 
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -60,9 +58,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 0.60.0-1mdv2010.0
 + Revision: 406380
-- rebuild using %%perl_convert_version
-
-* Sun Jan 27 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.06-1mdv2008.1
+- rebuild using %0.17 Sun Jan 27 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.06-1mdv2008.1
 + Revision: 158618
 - update to new version 0.06
 
