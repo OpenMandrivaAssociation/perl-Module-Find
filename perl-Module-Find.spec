@@ -1,13 +1,14 @@
 %define upstream_name	 Module-Find
+%define upstream_version 0.17
 Name:		perl-%{upstream_name}
 Version:	0.17
-Release:	2
+Release:	1
 
 Summary:	Find and use installed modules in a (sub)category
 License:	Artistic/GPL
 Group:		Development/Perl
 Url:		https://github.com/crenz/Module-Find
-Source0:	https://cpan.metacpan.org/authors/id/C/CR/CRENZ/Module-Find-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/C/CR/CRENZ/Module-Find-0.17.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -41,40 +42,5 @@ perl Makefile.PL INSTALLDIRS=vendor
 %doc Changes
 %{_mandir}/man*/*
 %{perl_vendorlib}/Module
-
-
-%changelog
-* Sun Feb 28 2010 Jérôme Quelin <jquelin@mandriva.org> 0.100.0-1mdv2010.1
-+ Revision: 512596
-- update to 0.10
-
-* Fri Feb 26 2010 Jérôme Quelin <jquelin@mandriva.org> 0.90.0-1mdv2010.1
-+ Revision: 511456
-- update to 0.09
-
-* Wed Sep 09 2009 Jérôme Quelin <jquelin@mandriva.org> 0.80.0-1mdv2010.0
-+ Revision: 435715
-- update to 0.08
-
-* Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 0.60.0-1mdv2010.0
-+ Revision: 406380
-- rebuild using %0.17 Sun Jan 27 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.06-1mdv2008.1
-+ Revision: 158618
-- update to new version 0.06
-
-  + Olivier Blin <oblin@mandriva.com>
-    - restore BuildRoot
-
-  + Thierry Vignaud <tv@mandriva.org>
-    - kill re-definition of %%buildroot on Pixel's request
-
-* Sat Sep 15 2007 Guillaume Rousse <guillomovitch@mandriva.org> 0.05-2mdv2008.0
-+ Revision: 86640
-- rebuild
-
-
-* Mon Jun 26 2006 Scott Karns <scottk@mandriva.org> 0.05-1mdv2007.0
-- Initial MDV release
-
 
 
